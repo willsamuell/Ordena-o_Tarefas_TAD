@@ -26,8 +26,7 @@ public class OrdenaçãoTarefas {
         array.inserirTarefa("Cadeira", 6);
         array.inserirTarefa("Cadeira", 92);
         array.inserirTarefa("MEsa", 66);
-        array.insertionSort();
-        array.mostrarTarefas();
+       array.achar("Pedro");
         
         
         

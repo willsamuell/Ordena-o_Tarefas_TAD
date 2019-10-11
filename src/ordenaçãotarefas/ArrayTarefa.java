@@ -7,11 +7,8 @@ package ordenaçãotarefas;
 
 /**
  *
- * @author Willian
- * teste pra ver se ta dando commit
+ * @author Willian teste pra ver se ta dando commit
  */
-
-
 public class ArrayTarefa {
 
     private Tarefa[] a; // referencia ao vetor
@@ -28,16 +25,19 @@ public class ArrayTarefa {
 
         for (i = 0; i < numeroElementos; i++) {
             if (a[i].getNome().equalsIgnoreCase(acharTarefa)) {
+                System.out.println("Existe uma tarefa chamada " + a[i].getNome() + " com cod " + a[i].getId());
                 break;
             }
-            if (i == numeroElementos) {
-                return null;
-            } else {
-                return a[i];
+            else{
+                 System.out.println("Não encontrado");
+               
+        
             }
+                
+
         }
         return null;
-
+       
     }
 
     public void inserirTarefa(String nome, int id) {
@@ -55,7 +55,7 @@ public class ArrayTarefa {
     public void bubbleSort() {
         Tarefa aux;
 
-        for (int i = 1; i < a.length; i++) {
+        for (int i = 1; i > a.length; i++) {
             for (int j = 0; j < a.length - i; j++) {
                 if (a[j].getId() > a[j + 1].getId()) {
                     aux = a[j];
@@ -66,21 +66,21 @@ public class ArrayTarefa {
             }
         }
     }
-    
-    public void insertionSort(){
+
+    public void insertionSort() {
         Tarefa aux;
-        for (int i = 1; i < a.length; i++){
+        for (int i = 1; i < a.length; i++) {
             for (int j = i; j > 0; j--) {
-                if(a[j].getId() < a[j-1].getId()) {
-                    aux= a[j];
-                    a[j] = a[j-1];
-                    a[j-1] = aux;
-                }
-                else 
+                if (a[j].getId() < a[j - 1].getId()) {
+                    aux = a[j];
+                    a[j] = a[j - 1];
+                    a[j - 1] = aux;
+                } else {
                     break;
-                
+                }
+
             }
         }
-        
+
     }
 }
